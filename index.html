@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이정훈 포트폴리오 — 대한민국 실행력 1등 기획자</title>
+  <meta name="description" content="5년간 스타트업 2곳의 월 매출을 각각 1억 이상으로 성장시킨 마케팅 기획자 이정훈의 포트폴리오">
+  <!-- Pretendard 웹폰트 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    /* ===== CSS 변수 ===== */
+    :root {
+      --primary: #185FA5;
+      --primary-light: #e8f0fa;
+      --primary-dark: #0e3f6e;
+      --bg: #ffffff;
+      --text: #222222;
+      --text-light: #666666;
+      --text-muted: #999999;
+      --border: #e5e5e5;
+      --card-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      --card-hover-shadow: 0 6px 24px rgba(0,0,0,0.10);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --max-width: 1080px;
+      --tag-green: #16a34a;
+      --tag-green-bg: #dcfce7;
+      --tag-blue: #185FA5;
+      --tag-blue-bg: #dbeafe;
+      --tag-orange: #ea580c;
+      --tag-orange-bg: #fff7ed;
+      --tag-purple: #7c3aed;
+      --tag-purple-bg: #ede9fe;
+      --tag-red-orange: #dc2626;
+      --tag-red-orange-bg: #fef2f2;
+      --danger: #dc2626;
+      --danger-bg: #fef2f2;
+      --success: #16a34a;
+      --success-bg: #dcfce7;
+      --insight-border: #16a34a;
+    }
+
+    /* ===== 리셋 & 기본 ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: var(--primary); text-decoration: none; }
+
+    /* ===== 컨테이너 ===== */
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+
+    /* ===== Hero 섹션 ===== */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+    .hero-profile {
+      width: 96px; height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      border: 3px solid var(--primary-light);
+      background: linear-gradient(135deg, var(--primary-light), #c5d8ed);
+    }
+    /* 프로필 placeholder */
+    .hero-profile-placeholder {
+      width: 96px; height: 96px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      background: linear-gradient(135deg, var(--primary-light), #c5d8ed);
+      display: flex; align-items: center; justify-content: center;
+      border: 3px solid var(--primary-light);
+      color: var(--primary);
+      font-size: 36px;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1.4;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+    .hero h1 .highlight { color: var(--primary); }
+    .hero-sub {
+      font-size: 17px;
+      color: var(--text-light);
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .hero-meta span::before {
+      content: '';
+      display: inline-block;
+      width: 4px; height: 4px;
+      background: var(--text-muted);
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    .hero-meta span:first-child::before { display: none; }
+
+    /* ===== 핵심 지표 섹션 ===== */
+    .metrics {
+      padding: 40px 0 60px;
+    }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .metric-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      text-align: center;
+      border-top: 3px solid var(--primary);
+      transition: box-shadow 0.2s;
+    }
+    .metric-card:hover { box-shadow: var(--card-hover-shadow); }
+    .metric-number {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .metric-desc {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+
+    /* ===== 섹션 공통 ===== */
+    .section { padding: 60px 0; }
+    .section-title {
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 40px;
+      letter-spacing: -0.3px;
+    }
+    .section-title .dot {
+      color: var(--primary);
+    }
+
+    /* ===== 프로젝트 그리드 ===== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    /* 프로젝트 카드 */
+    .project-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      cursor: pointer;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .project-card:hover {
+      box-shadow: var(--card-hover-shadow);
+      transform: translateY(-2px);
+    }
+
+    /* featured 카드 (디잘알) */
+    .project-card.featured {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .project-card.featured .card-thumb { min-height: 320px; }
+
+    .card-thumb {
+      position: relative;
+      min-height: 200px;
+      overflow: hidden;
+    }
+    .card-thumb img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      position: absolute; top: 0; left: 0;
+    }
+    /* 이미지 placeholder */
+    .img-placeholder {
+      width: 100%; height: 100%;
+      position: absolute; top: 0; left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 20px;
+      text-align: center;
+    }
+    .img-placeholder .icon {
+      font-size: 32px;
+      opacity: 0.8;
+    }
+    .placeholder-dizalal { background: linear-gradient(135deg, #185FA5, #2d8cf0); }
+    .placeholder-franchise { background: linear-gradient(135deg, #1e6bb8, #4da3e8); }
+    .placeholder-youtube { background: linear-gradient(135deg, #ea580c, #f59e0b); }
+    .placeholder-org { background: linear-gradient(135deg, #7c3aed, #a78bfa); }
+    .placeholder-cafe { background: linear-gradient(135deg, #dc2626, #f87171); }
+    .placeholder-generic { background: linear-gradient(135deg, #64748b, #94a3b8); }
+
+    .card-body { padding: 24px; }
+    .card-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .tag-green { background: var(--tag-green-bg); color: var(--tag-green); }
+    .tag-blue { background: var(--tag-blue-bg); color: var(--tag-blue); }
+    .tag-orange { background: var(--tag-orange-bg); color: var(--tag-orange); }
+    .tag-purple { background: var(--tag-purple-bg); color: var(--tag-purple); }
+    .tag-red-orange { background: var(--tag-red-orange-bg); color: var(--tag-red-orange); }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .card-desc {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    /* 카드 내 지표 그리드 (디잘알 featured) */
+    .card-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .card-metric-item {
+      background: var(--primary-light);
+      border-radius: var(--radius-sm);
+      padding: 12px;
+      text-align: center;
+    }
+    .card-metric-item .num {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .card-metric-item .label {
+      font-size: 11px;
+      color: var(--text-light);
+      margin-top: 2px;
+    }
+
+    /* 카드 내 결과 박스 */
+    .card-result {
+      background: var(--primary-light);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      font-size: 13px;
+      color: var(--primary-dark);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .card-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .card-link:hover { text-decoration: underline; }
+
+    /* ===== 오버레이 팝업 ===== */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 1000;
+      overflow-y: auto;
+      padding: 40px 20px;
+      backdrop-filter: blur(4px);
+    }
+    .overlay.active { display: flex; justify-content: center; align-items: flex-start; }
+    .overlay-content {
+      background: var(--bg);
+      border-radius: var(--radius);
+      max-width: 800px;
+      width: 100%;
+      padding: 40px;
+      position: relative;
+      margin: 20px auto;
+      animation: slideUp 0.3s ease;
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .overlay-close {
+      position: absolute;
+      top: 16px; right: 16px;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: var(--text-light);
+      transition: background 0.2s;
+    }
+    .overlay-close:hover { background: #f5f5f5; }
+
+    /* 팝업 내 지표 */
+    .popup-metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .popup-metric {
+      text-align: center;
+      padding: 16px 8px;
+      background: #f8fafc;
+      border-radius: var(--radius-sm);
+    }
+    .popup-metric .num {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .popup-metric .label {
+      font-size: 12px;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+
+    /* 팝업 내 이미지 */
+    .popup-image {
+      position: relative;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      margin-bottom: 32px;
+      min-height: 200px;
+    }
+    .popup-image img {
+      width: 100%;
+    }
+    .popup-images-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .popup-images-row .popup-image {
+      margin-bottom: 0;
+      min-height: 150px;
+    }
+
+    /* SACR 레이블 */
+    .sacr-label {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+    .sacr-s { background: #dbeafe; color: #1e40af; }
+    .sacr-a { background: #dcfce7; color: #166534; }
+    .sacr-c { background: #fef2f2; color: #991b1b; }
+    .sacr-r { background: #fefce8; color: #854d0e; }
+
+    .popup-section {
+      margin-bottom: 28px;
+    }
+    .popup-section p, .popup-section ul {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.8;
+    }
+    .popup-section ul {
+      padding-left: 20px;
+    }
+    .popup-section li {
+      margin-bottom: 6px;
+    }
+
+    /* 고난 박스 (빨간) */
+    .challenge-box {
+      background: var(--danger-bg);
+      border-left: 3px solid var(--danger);
+      padding: 16px 20px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: #991b1b;
+      line-height: 1.6;
+    }
+
+    /* 인사이트 박스 (초록) */
+    .insight-box {
+      background: var(--success-bg);
+      border-left: 3px solid var(--insight-border);
+      padding: 16px 20px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 14px;
+      color: #166534;
+      line-height: 1.7;
+    }
+
+    /* 결과 그리드 */
+    .result-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .result-item {
+      background: #f8fafc;
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      text-align: center;
+    }
+    .result-item .num {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .result-item .label {
+      font-size: 12px;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+
+    /* 비교 박스 */
+    .compare-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .compare-before {
+      background: #fef2f2;
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      text-align: center;
+    }
+    .compare-before .compare-label {
+      font-size: 12px; font-weight: 700; color: #991b1b;
+      margin-bottom: 8px;
+    }
+    .compare-after {
+      background: #dcfce7;
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      text-align: center;
+    }
+    .compare-after .compare-label {
+      font-size: 12px; font-weight: 700; color: #166534;
+      margin-bottom: 8px;
+    }
+    .compare-box p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* 바 차트 (디잘알 매출) */
+    .bar-chart {
+      display: flex;
+      align-items: flex-end;
+      gap: 16px;
+      height: 200px;
+      padding: 20px 0;
+      margin-bottom: 24px;
+    }
+    .bar-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      height: 100%;
+      justify-content: flex-end;
+    }
+    .bar-value {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .bar {
+      width: 100%;
+      max-width: 80px;
+      border-radius: 6px 6px 0 0;
+      transition: height 0.8s ease;
+    }
+    .bar-label {
+      font-size: 12px;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    /* 데이터 테이블 */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+    .data-table th {
+      background: #f8fafc;
+      padding: 10px 12px;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 2px solid var(--border);
+      font-size: 13px;
+    }
+    .data-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* 타임라인 (행동 타임라인) */
+    .action-timeline {
+      padding-left: 20px;
+      border-left: 2px solid var(--primary-light);
+      margin-bottom: 16px;
+    }
+    .action-timeline .step {
+      position: relative;
+      padding: 0 0 16px 16px;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .action-timeline .step::before {
+      content: '';
+      position: absolute;
+      left: -25px; top: 8px;
+      width: 8px; height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+    }
+    .action-timeline .step strong {
+      color: var(--primary);
+    }
+
+    /* ===== 경력 섹션 ===== */
+    .career-timeline {
+      position: relative;
+      padding-left: 32px;
+    }
+    .career-timeline::before {
+      content: '';
+      position: absolute;
+      left: 8px; top: 0; bottom: 0;
+      width: 2px;
+      background: var(--primary-light);
+    }
+    .career-item {
+      position: relative;
+      margin-bottom: 40px;
+    }
+    .career-item::before {
+      content: '';
+      position: absolute;
+      left: -28px; top: 6px;
+      width: 12px; height: 12px;
+      background: var(--primary);
+      border-radius: 50%;
+      border: 3px solid var(--primary-light);
+    }
+    .career-company {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .career-role {
+      font-size: 14px;
+      color: var(--text-light);
+      margin-bottom: 12px;
+    }
+    .career-details {
+      list-style: none;
+      padding: 0;
+    }
+    .career-details li {
+      font-size: 14px;
+      line-height: 1.8;
+      padding-left: 16px;
+      position: relative;
+      color: var(--text-light);
+    }
+    .career-details li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* ===== 스킬 섹션 ===== */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skill-chip {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 20px;
+      background: #f1f5f9;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      border: 1px solid var(--border);
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .skill-chip:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* ===== 푸터 ===== */
+    .footer {
+      padding: 40px 0;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      margin-top: 60px;
+    }
+    .footer p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ===== 반응형 (768px 이하) ===== */
+    @media (max-width: 768px) {
+      .hero { padding: 60px 0 40px; }
+      .hero h1 { font-size: 26px; }
+      .hero-sub { font-size: 15px; }
+      .hero-meta { gap: 4px 16px; font-size: 13px; }
+
+      .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+      .metric-number { font-size: 22px; }
+
+      .section-title { font-size: 22px; margin-bottom: 28px; }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .project-card.featured {
+        grid-template-columns: 1fr;
+      }
+      .project-card.featured .card-thumb { min-height: 200px; }
+
+      .overlay-content { padding: 24px; margin: 10px; }
+      .popup-metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .popup-images-row {
+        grid-template-columns: 1fr;
+      }
+      .result-grid { grid-template-columns: 1fr; }
+      .compare-box { grid-template-columns: 1fr; }
+      .bar-chart { height: 160px; gap: 10px; }
+
+      .career-company { font-size: 17px; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .hero h1 { font-size: 22px; }
+      .metrics-grid { grid-template-columns: 1fr 1fr; }
+      .popup-metrics { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Hero 섹션 ===== -->
+  <header class="hero">
+    <div class="container">
+      <!-- 프로필 이미지 (onerror로 placeholder 전환) -->
+      <div id="profile-wrapper">
+        <img src="images/profile.jpg" alt="이정훈 프로필" class="hero-profile"
+             onerror="this.style.display='none'; document.getElementById('profile-placeholder').style.display='flex';">
+        <div id="profile-placeholder" class="hero-profile-placeholder" style="display:none;">JH</div>
+      </div>
+
+      <span class="hero-tag">이직용 포트폴리오 · 마케팅기획 · PM · PO</span>
+
+      <h1>대한민국 <span class="highlight">실행력</span> 1등 기획자,<br>이정훈입니다.</h1>
+
+      <p class="hero-sub">
+        5년간 스타트업 2곳의 월 매출을 각각 1억 이상으로 성장시켰습니다.<br>
+        아이디어를 빠르게 실행하고, 숫자로 증명하는 기획자입니다.
+      </p>
+
+      <div class="hero-meta">
+        <span>만 30세 · 1995년생</span>
+        <span>경력 4년 9개월</span>
+        <span>거주 경기 안양</span>
+        <span>희망직무 마케팅기획 · PM · PO</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== 핵심 지표 ===== -->
+    <section class="metrics">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-number">2곳 연속</div>
+            <div class="metric-desc">합류한 스타트업, 각각<br>월 매출 1억 이상 달성 기여</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">월 1.3억</div>
+            <div class="metric-desc">인바운드 시스템 구축으로<br>월 4천만 → 1.3억 성장</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">ROI 27배</div>
+            <div class="metric-desc">광고비 110만으로<br>누적 매출 2,969만 창출</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-number">4→22명</div>
+            <div class="metric-desc">채용 시스템 설계로<br>1년 만에 5배 조직 확장</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 주요 프로젝트 ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">주요 프로젝트<span class="dot">.</span></h2>
+
+        <div class="projects-grid">
+
+          <!-- 프로젝트 1: 디잘알 (FEATURED) -->
+          <article class="project-card featured" onclick="openOverlay('dizalal')">
+            <div class="card-thumb">
+              <img src="images/thumb-dizalal.jpg" alt="디잘알 프로젝트"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="img-placeholder placeholder-dizalal" style="display:none;">
+                <span class="icon">&#x1F3A8;</span>
+                디잘알 — 디자인 월 구독제 서비스
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-tag tag-green">신사업 런칭 · 대표 케이스</span>
+              <h3 class="card-title">디잘알 — 디자인 월 구독제 서비스</h3>
+              <p class="card-desc">경쟁사 30개 분석, 니치마켓 타깃팅으로 기존 150~200만원 시장을 99만원으로 진입. 총 광고비 110만원으로 4개월 연속 매출 성장.</p>
+              <div class="card-metrics">
+                <div class="card-metric-item">
+                  <div class="num">2,969만원</div>
+                  <div class="label">1~4월 누적 매출</div>
+                </div>
+                <div class="card-metric-item">
+                  <div class="num">110만원</div>
+                  <div class="label">누적 총 광고비</div>
+                </div>
+                <div class="card-metric-item">
+                  <div class="num">14개사</div>
+                  <div class="label">현 구독 업체</div>
+                </div>
+                <div class="card-metric-item">
+                  <div class="num">4월 980만↑</div>
+                  <div class="label">13일까지 최고 매출</div>
+                </div>
+              </div>
+              <span class="card-link">케이스 스터디 읽기 →</span>
+            </div>
+          </article>
+
+          <!-- 프로젝트 2: 프랜차이즈 마케팅 -->
+          <article class="project-card" onclick="openOverlay('franchise')">
+            <div class="card-thumb">
+              <img src="images/thumb-franchise.jpg" alt="프랜차이즈 마케팅"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="img-placeholder placeholder-franchise" style="display:none;">
+                <span class="icon">&#x1F4C8;</span>
+                프랜차이즈 마케팅 서비스
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-tag tag-blue">인바운드 마케팅</span>
+              <h3 class="card-title">프랜차이즈 마케팅 서비스 런칭</h3>
+              <p class="card-desc">콜드콜 없이 순수 인바운드만으로. CPA 업계 절반 달성.</p>
+              <div class="card-result">문의 2~3건 → 14건 · CPA 5만원 (업계 10만원)</div>
+              <span class="card-link">케이스 스터디 읽기 →</span>
+            </div>
+          </article>
+
+          <!-- 프로젝트 3: 유튜브 채널 성장 -->
+          <article class="project-card" onclick="openOverlay('youtube')">
+            <div class="card-thumb">
+              <img src="images/thumb-youtube.jpg" alt="유튜브 채널 성장"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="img-placeholder placeholder-youtube" style="display:none;">
+                <span class="icon">&#x25B6;</span>
+                패션 마케팅 유튜브 채널
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-tag tag-orange">콘텐츠 마케팅</span>
+              <h3 class="card-title">패션 마케팅 유튜브 채널 성장</h3>
+              <p class="card-desc">광고비 0원. 실수요 콘텐츠 피벗으로 1년 만에 1만 구독자.</p>
+              <div class="card-result">구독자 500 → 1만 (1년) · 신규 문의 25~30%</div>
+              <span class="card-link">케이스 스터디 읽기 →</span>
+            </div>
+          </article>
+
+          <!-- 프로젝트 4: 조직 확장 -->
+          <article class="project-card" onclick="openOverlay('org')">
+            <div class="card-thumb">
+              <img src="images/thumb-org.jpg" alt="조직 확장"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="img-placeholder placeholder-org" style="display:none;">
+                <span class="icon">&#x1F465;</span>
+                스타트업 조직 확장
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-tag tag-purple">조직 빌딩</span>
+              <h3 class="card-title">스타트업 조직 확장 — 4명 → 22명</h3>
+              <p class="card-desc">채용을 마케팅처럼 설계해 1년 만에 5배 확장.</p>
+              <div class="card-result">퇴사율 20% (업계 평균 40%) · 1년 22명</div>
+              <span class="card-link">케이스 스터디 읽기 →</span>
+            </div>
+          </article>
+
+          <!-- 프로젝트 5: 카페게이트 -->
+          <article class="project-card" onclick="openOverlay('cafe')">
+            <div class="card-thumb">
+              <img src="images/thumb-cafe.jpg" alt="카페게이트 CPA 개선"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="img-placeholder placeholder-cafe" style="display:none;">
+                <span class="icon">&#x2615;</span>
+                카페게이트 CPA 개선
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="card-tag tag-red-orange">광고 전략 재설계</span>
+              <h3 class="card-title">카페게이트 — 프랜차이즈 CPA 개선</h3>
+              <p class="card-desc">데이터 분석으로 잘못된 예산 구조 발견 후 전면 재설계.</p>
+              <div class="card-result">CPA 15만 → 8만원 · 진성 문의 급증</div>
+              <span class="card-link">케이스 스터디 읽기 →</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 경력 섹션 ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">경력<span class="dot">.</span></h2>
+        <div class="career-timeline">
+
+          <div class="career-item">
+            <div class="career-company">마케팅레버리지</div>
+            <div class="career-role">경영기획팀 실장 | 2024.08 ~ 재직중</div>
+            <ul class="career-details">
+              <li>매출 성장: 월 4천만 → 1.3억 (200% 성장), 26년 말 월 3억 목표 진행 중</li>
+              <li>인바운드 시스템 구축: 광고비 100만/문의 10건 → 230만/문의 112건</li>
+              <li>수익성 개선: 네이버 대행 수수료율 14% → 14.8% 협상, 연간 약 1천만 추가 수익</li>
+              <li>조직 확장: 4명 → 22명 (1년 만), 퇴사율 20% 유지</li>
+              <li>브랜딩: 유튜브·블로그 채널 기획·운영 총괄</li>
+            </ul>
+          </div>
+
+          <div class="career-item">
+            <div class="career-company">기획하는사람들</div>
+            <div class="career-role">경영기획팀 사원 → 실장 | 2021.07 ~ 2024.08 (3년 2개월)</div>
+            <ul class="career-details">
+              <li>광고 운영: 패션 전문 광고주 월 28개 동시 운영, 메타·SNS·GDN·GFA 집행</li>
+              <li>클라이언트 성과: 광고주 10% 이상 매출 1.5~2배 성장 달성</li>
+              <li>채널 성장: 유튜브 구독자 500 → 1만, 신규 문의 비중 25~30%</li>
+              <li>회사 기여: 월 매출 6천만 → 1.8억 성장 (기여도 15%)</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 스킬 섹션 ===== -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">스킬<span class="dot">.</span></h2>
+        <div class="skills-grid">
+          <span class="skill-chip">메타 광고</span>
+          <span class="skill-chip">SNS 광고</span>
+          <span class="skill-chip">GDN</span>
+          <span class="skill-chip">GFA</span>
+          <span class="skill-chip">네이버 광고</span>
+          <span class="skill-chip">유튜브 채널 운영</span>
+          <span class="skill-chip">블로그 SEO</span>
+          <span class="skill-chip">랜딩페이지 기획</span>
+          <span class="skill-chip">인사·채용 시스템</span>
+          <span class="skill-chip">Notion</span>
+          <span class="skill-chip">Figma</span>
+          <span class="skill-chip">Photoshop</span>
+          <span class="skill-chip">Premiere</span>
+          <span class="skill-chip">Excel</span>
+          <span class="skill-chip">전산회계 1급</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== 푸터 ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 이정훈. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ========== 케이스 스터디 오버레이 팝업들 ========== -->
+
+  <!-- 디잘알 팝업 -->
+  <div class="overlay" id="overlay-dizalal" onclick="closeOverlayOutside(event, 'dizalal')">
+    <div class="overlay-content">
+      <button class="overlay-close" onclick="closeOverlay('dizalal')">&times;</button>
+
+      <span class="card-tag tag-green" style="margin-bottom:16px;">신사업 런칭 · 대표 케이스</span>
+      <h2 style="font-size:24px; font-weight:800; margin-bottom:24px;">디잘알 — 디자인 월 구독제 서비스</h2>
+
+      <!-- 상단 지표 -->
+      <div class="popup-metrics">
+        <div class="popup-metric">
+          <div class="num">2,969만원</div>
+          <div class="label">1~4월 누적 매출</div>
+        </div>
+        <div class="popup-metric">
+          <div class="num">110만원</div>
+          <div class="label">누적 총 광고비</div>
+        </div>
+        <div class="popup-metric">
+          <div class="num">14개사</div>
+          <div class="label">현 구독 업체</div>
+        </div>
+        <div class="popup-metric">
+          <div class="num">80%</div>
+          <div class="label">직접 기여도</div>
+        </div>
+      </div>
+
+      <!-- 이미지 -->
+      <div class="popup-image">
+        <img src="images/dizalal-landing.jpg" alt="디잘알 랜딩페이지 전체 스크린샷"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="img-placeholder placeholder-dizalal" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%;">
+          <span class="icon">&#x1F5BC;</span>
+          디잘알 랜딩페이지 전체 스크린샷
+        </div>
+      </div>
+
+      <!-- S - 상황 -->
+      <div class="popup-section">
+        <span class="sacr-label sacr-s">S — 상황</span>
+        <p>경쟁사 약 30개의 가격·서비스 시간·퀄리티·작업 속도를 분석한 결과, 대부분이 패키징·퍼블리싱까지 포함해 월 150~200만 원 이상. 쇼핑몰·소형 대행사에겐 웹디자인 하나만 필요한데 쓸 일 없는 서비스에 돈을 내야 하는 구조였습니다.</p>
+      </div>
+
+      <!-- A - 행동 -->
+      <div class="popup-section">
+        <span class="sacr-label sacr-a">A — 행동</span>
+        <ul>
+          <li>1월, 70만 원(VAT별도) 소프트 오픈 — 낮은 가격으로 수요 먼저 검증.</li>
+          <li>신뢰 구축 — 유튜브 영상 1개 제작, 랜딩페이지 최상단 배치.</li>
+          <li>광고 — 메타 월 30~40만 + 네이버 10만. 소재: 기존 구독제 대비 가격 차이를 직접 언급하는 니치마켓 저격 메시지.</li>
+          <li>수요 확인 후 1월 중순, 99만 원(VAT별도)으로 인상.</li>
+        </ul>
+      </div>
+
+      <!-- 이미지 2개 -->
+      <div class="popup-images-row">
+        <div class="popup-image">
+          <img src="images/dizalal-meta-ad.jpg" alt="메타 광고 소재"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="img-placeholder placeholder-dizalal" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%;">
+            <span class="icon">&#x1F4F1;</span>
+            메타 광고 소재
+          </div>
+        </div>
+        <div class="popup-image">
+          <img src="images/dizalal-naver-ad.jpg" alt="네이버 광고 소재"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="img-placeholder placeholder-dizalal" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%;">
+            <span class="icon">&#x1F50D;</span>
+            네이버 광고 소재
+          </div>
+        </div>
+      </div>
+
+      <!-- C - 고난 -->
+      <div class="popup-section">
+        <span class="sacr-label sacr-c">C — 고난</span>
+        <div class="challenge-box">2월 매출 급락. 설 연휴로 의사결정 지연.</div>
+        <div class="challenge-box">작업량 기준 부재. 들쭉날쭉한 퀄리티로 초기 이탈 6개사 발생.</div>
+      </div>
+
+      <!-- R - 결과 -->
+      <div class="popup-section">
+        <span class="sacr-label sacr-r">R — 결과</span>
+
+        <!-- 월별 매출 바 차트 -->
+        <p style="font-size:14px; font-weight:600; margin-bottom:8px; color:var(--text-light);">월별 매출 추이</p>
+        <div class="bar-chart" id="dizalal-chart">
+          <div class="bar-item">
+            <span class="bar-value">622만</span>
+            <div class="bar" style="height:63%; background:var(--primary);"></div>
+            <span class="bar-label">1월</span>
+          </div>
+          <div class="bar-item">
+            <span class="bar-value">410만</span>
+            <div class="bar" style="height:42%; background:var(--danger);"></div>
+            <span class="bar-label">2월</span>
+          </div>
+          <div class="bar-item">
+            <span class="bar-value">955만</span>
+            <div class="bar" style="height:97%; background:var(--success);"></div>
+            <span class="bar-label">3월</span>
+          </div>
+          <div class="bar-item">
+            <span class="bar-value">980만↑</span>
+            <div class="bar" style="height:100%; background:var(--success);"></div>
+            <span class="bar-label">4월</span>
+          </div>
+        </div>
+
+        <!-- 결과 그리드 -->
+        <div class="result-grid">
+          <div class="result-item">
+            <div class="num">14개사</div>
+            <div class="label">현 구독 업체</div>
+          </div>
+          <div class="result-item">
+            <div class="num">6개사</div>
+            <div class="label">이탈 (초기 운영 미숙)</div>
+          </div>
+          <div class="result-item">
+            <div class="num">메타 87.9만 + 네이버 21.8만</div>
+            <div class="label">광고비 내역</div>
+          </div>
+          <div class="result-item">
+            <div class="num">누적 2,969만원</div>
+            <div class="label">1~4월 누적 매출</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 인사이트 -->
+      <div class="insight-box">낮은 가격으로 수요를 검증한 뒤 인상했고, 초기 이탈 원인을 운영 미숙으로 정확히 파악해 기준 내재화한 것이 3월 이후 반등의 핵심이었습니다.</div>
+    </div>
+  </div>
+
+  <!-- 프랜차이즈 팝업 -->
+  <div class="overlay" id="overlay-franchise" onclick="closeOverlayOutside(event, 'franchise')">
+    <div class="overlay-content">
+      <button class="overlay-close" onclick="closeOverlay('franchise')">&times;</button>
+
+      <span class="card-tag tag-blue" style="margin-bottom:16px;">인바운드 마케팅</span>
+      <h2 style="font-size:24px; font-weight:800; margin-bottom:24px;">프랜차이즈 마케팅 서비스 런칭</h2>
+
+      <!-- 상단 지표 -->
+      <div class="popup-metrics">
+        <div class="popup-metric">
+          <div class="num">14건</div>
+          <div class="label">월 문의 (기존 2~3건)</div>
+        </div>
+        <div class="popup-metric">
+          <div class="num">5만원</div>
+          <div class="label">문의 1건당 CPA</div>
+        </div>
+        <div class="popup-metric">
+          <div class="num">4~5건</div>
+          <div class="label">계약 전환</div>
+        </div>
+        <div class="popup-metric">
+          <div class="num">1주일</div>
+          <div class="label">영상+랜딩 완성</div>
+        </div>
+      </div>
+
+      <!-- 이미지 -->
+      <div class="popup-image">
+        <img src="images/franchise-landing.jpg" alt="프랜차이즈 마케팅 서비스 랜딩페이지 스크린샷"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="img-placeholder placeholder-franchise" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%;">
+          <span class="icon">&#x1F5BC;</span>
+          프랜차이즈 마케팅 서비스 랜딩페이지 스크린샷
+        </div>
+      </div>
+
+      <!-- S - 상황 -->
+      <div class="popup-section">
+        <span class="sacr-label sacr-s">S — 상황</span>
+        <p>사내 프랜차이즈 팀장 출신 마케터가 있었지만 외부에 알려지지 않아 월 문의 2~3건에 불과. 예산 없이 내부 자원만으로 수익원을 만들어야 했습니다.</p>
+      </div>
+
+      <!-- A - 행동 (타임라인) -->
+      <div class="popup-section">
+        <span class="sacr-label sacr-a">A — 행동</span>
+        <div class="action-timeline">
+          <div class="step"><strong>Day 1:</strong> 유튜브·블로그 기획·촬영. 프랜차이즈 팀장 인터뷰 형식으로 촬영.</div>
+          <div class="step"><strong>Day 2~7:</strong> 랜딩페이지 병행 제작. 평균 5일 → 3일(40% 단축).</div>
+          <div class="step"><strong>랜딩 설계:</strong> 인터뷰 영상 최상단 + 규모별 문의당 광고비 선제 공개. 4MAT 기법 적용.</div>
+          <div class="step"><strong>광고:</strong> 인터뷰 영상 숏폼 재가공 → 메타 집행. 콜드콜 없이 순수 인바운드.</div>
+        </div>
+      </div>
+
+      <!-- 이미지 2개 -->
+      <div class="popup-images-row">
+        <div class="popup-image">
+          <img src="images/franchise-youtube-thumb.jpg" alt="유튜브 인터뷰 영상 썸네일"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="img-placeholder placeholder-franchise" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%;">
+            <span class="icon">&#x25B6;</span>
+            유튜브 인터뷰 영상 썸네일
+          </div>
+        </div>
+        <div class="popup-image">
+          <img src="images/franchise-meta-ad.jpg" alt="메타 숏폼 광고 소재"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="img-placeholder placeholder-franchise" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%;">
+            <span class="icon">&#x1F4F1;</span>
+            메타 숏폼 광고 소재
+          </div>
+        </div>
+      </div>
+
+      <!-- R - 결과 -->
+      <div class="popup-section">
+        <span class="sacr-label sacr-r">R — 결과</span>
+
+        <!-- 비교 박스 -->
+        <div class="compare-box">
+          <div class="compare-before">
+            <div class="compare-label">업계 평균</div>
+            <p>CPA 10만원 이상<br>콜드콜 필요</p>
+          </div>
+          <div class="compare-after">
+            <div class="compare-label">이 프로젝트</div>
+            <p>CPA 5만원<br>순수 인바운드</p>
+          </div>
+        </div>
+
+        <!-- 결과 그리드 -->
+        <div class="result-grid">
+          <div class="result-item">
+            <div class="num">2~3건 → 14건</div>
+            <div class="label">월 문의 수</div>
+          </div>
+          <div class="result-item">
+            <div class="num">4~5건</div>
+            <div class="label">계약 전환</div>
+          </div>
+          <div class="result-item">
+            <div class="num">800~1,000만</div>
+            <div class="label">월 추가 매출(누적형)</div>
+          </div>
+          <div class="result-item">
+            <div class="num">CPA 50% 절감</div>
+            <div class="label">10만 → 5만원</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 인사이트 -->
+      <div class="insight-box">"신뢰 콘텐츠 → 랜딩페이지 → 숏폼 광고" 구조만으로 CPA를 절반으로. 진성 고객 필터링 설계가 계약 전환율을 높였습니다.</div>
+    </div>
+  </div>
+
+  <!-- 유튜브 팝업 -->
+  <div class="overlay" id="overlay-youtube" onclick="closeOverlayOutside(event, 'youtube')">
+    <div class="overlay-content">
+      <button class="overlay-close" onclick="closeOverlay('youtube')">&times;</button>
+
+      <span class="card-tag tag-orange" style="margin-bottom:16px;">콘텐츠 마케팅</span>
+      <h2 style="font-size:24px; font-weight:800; margin-bottom:24px;">패션 마케팅 유튜브 채널 성장</h2>
+
+      <!-- 상단 지표 -->
+      <div class="popup-metrics">
+        <div class="popup-metric">
+          <div class="num">500→1만</div>
+          <div class="label">구독자 (1년 만에)</div>
+        </div>
+        <div class="popup-metric">
+          <div class="num">5~6만</div>
+          <div class="label">영상 평균 조회수</div>
+        </div>
+        <div class="popup-metric">
+          <div class="num">25~30%</div>
+          <div class="label">유튜브발 신규 문의</div>
+        </div>
+        <div class="popup-metric">
+          <div class="num">0원</div>
+          <div class="label">채널 성장 광고비</div>
+        </div>
+      </div>
+
+      <!-- 이미지 -->
+      <div class="popup-image">
+        <img src="images/youtube-channel.jpg" alt="@onlyfashionmkt 채널 스크린샷"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="img-placeholder placeholder-youtube" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%;">
+          <span class="icon">&#x25B6;</span>
+          @onlyfashionmkt 채널 스크린샷
+        </div>
+      </div>
+
+      <!-- S - 상황 -->
+      <div class="popup-section">
+        <span class="sacr-label sacr-s">S — 상황</span>
+        <p>합류 당시 구독자 500명. 트렌드 위주 콘텐츠는 반응이 없었습니다. "우리가 만들고 싶은 것"과 "사람들이 보고 싶은 것"이 달랐습니다.</p>
+      </div>
+
+      <!-- 고난 박스 -->
+      <div class="popup-section">
+        <div class="challenge-box">초기 트렌드·소식 위주 콘텐츠 → 반응 없음</div>
+      </div>
+
+      <!-- A - 행동 -->
+      <div class="popup-section">
+        <span class="sacr-label sacr-a">A — 행동</span>
+        <ul>
+          <li>"패션 쇼핑몰 광고 세팅법·관리법", "마진율 계산방법" 등 바로 써먹을 실전 정보로 피벗.</li>
+          <li>영상 후반부에 자사 서비스 자연스럽게 노출.</li>
+          <li>주간 매출 ↔ 조회수 교차 분석으로 문의 연결 콘텐츠 추적.</li>
+          <li>블로그 칼럼 연계로 네이버 자연 유입 병행.</li>
+        </ul>
+      </div>
+
+      <!-- 이미지 2개 -->
+      <div class="popup-images-row">
+        <div class="popup-image">
+          <img src="images/youtube-video-thumb.jpg" alt="고조회수 영상 썸네일"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="img-placeholder placeholder-youtube" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%;">
+            <span class="icon">&#x25B6;</span>
+            고조회수 영상 썸네일
+          </div>
+        </div>
+        <div class="popup-image">
+          <img src="images/youtube-analytics.jpg" alt="유튜브 애널리틱스 캡처"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="img-placeholder placeholder-youtube" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%;">
+            <span class="icon">&#x1F4CA;</span>
+            유튜브 애널리틱스 캡처
+          </div>
+        </div>
+      </div>
+
+      <!-- R - 결과 -->
+      <div class="popup-section">
+        <span class="sacr-label sacr-r">R — 결과</span>
+        <div class="result-grid">
+          <div class="result-item">
+            <div class="num">1만명</div>
+            <div class="label">구독자 (1년 소요)</div>
+          </div>
+          <div class="result-item">
+            <div class="num">5~6만회</div>
+            <div class="label">핵심 영상 조회수</div>
+          </div>
+          <div class="result-item">
+            <div class="num">25~30%</div>
+            <div class="label">전체 신규 문의 유튜브 비중</div>
+          </div>
+          <div class="result-item">
+            <div class="num">광고비 0</div>
+            <div class="label">채널 성장 투입 광고비</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 인사이트 -->
+      <div class="insight-box">"고객이 찾는 정보"를 줬을 때 채널이 살아났습니다. 전체 신규 문의 30%를 커버하는 인바운드 채널이 됐습니다.</div>
+    </div>
+  </div>
+
+  <!-- 조직 확장 팝업 -->
+  <div class="overlay" id="overlay-org" onclick="closeOverlayOutside(event, 'org')">
+    <div class="overlay-content">
+      <button class="overlay-close" onclick="closeOverlay('org')">&times;</button>
+
+      <span class="card-tag tag-purple" style="margin-bottom:16px;">조직 빌딩</span>
+      <h2 style="font-size:24px; font-weight:800; margin-bottom:24px;">스타트업 조직 확장 — 4명 → 22명</h2>
+
+      <!-- 상단 지표 -->
+      <div class="popup-metrics">
+        <div class="popup-metric">
+          <div class="num">4→22명</div>
+          <div class="label">1년 만에 5배</div>
+        </div>
+        <div class="popup-metric">
+          <div class="num">퇴사율 20%</div>
+          <div class="label">업계 평균 40%</div>
+        </div>
+        <div class="popup-metric">
+          <div class="num">3개월</div>
+          <div class="label">실무 투입 온보딩</div>
+        </div>
+        <div class="popup-metric">
+          <div class="num">2채널</div>
+          <div class="label">채용 브랜딩 운영</div>
+        </div>
+      </div>
+
+      <!-- 이미지 2개 -->
+      <div class="popup-images-row">
+        <div class="popup-image">
+          <img src="images/org-recruit-thumb.jpg" alt="채용 브랜딩 영상 썸네일"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="img-placeholder placeholder-org" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%;">
+            <span class="icon">&#x1F3AC;</span>
+            채용 브랜딩 영상 썸네일
+          </div>
+        </div>
+        <div class="popup-image">
+          <img src="images/org-team-photo.jpg" alt="팀 단체 사진"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="img-placeholder placeholder-org" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%;">
+            <span class="icon">&#x1F465;</span>
+            팀 단체 사진
+          </div>
+        </div>
+      </div>
+
+      <!-- S - 상황 -->
+      <div class="popup-section">
+        <span class="sacr-label sacr-s">S — 상황</span>
+        <p>합류 당시 팀원 4명 전원 대표 지인. 체계적 채용 경험 없음. "우리 같은 스타트업에 누가 오겠어"라는 분위기.</p>
+      </div>
+
+      <!-- 고난 박스 -->
+      <div class="popup-section">
+        <div class="challenge-box">스타트업 대행사 = 영업전화, 불안한 고용이라는 이미지가 지원자를 막았습니다.</div>
+      </div>
+
+      <!-- A - 행동 -->
+      <div class="popup-section">
+        <span class="sacr-label sacr-a">A — 행동</span>
+        <ul>
+          <li>와야 할 이유 설계 — 영업전화 없음, 체계적 교육, 초기 인센티브 강화.</li>
+          <li>채용 브랜딩 — 대표·직원 인터뷰 영상 제작, 유튜브·인스타 배포.</li>
+          <li>채널 설계 — 잡코리아 공고 + 그리팅 지원(허수 차단) + 인스타 광고.</li>
+          <li>면접 기준 — 채용 영상 보고 "함께하고 싶다"는 사람 우선. 1차 실무 → 2차 임원.</li>
+          <li>온보딩 — 3개월 내 실무 투입 가능 커리큘럼 직접 설계.</li>
+        </ul>
+      </div>
+
+      <!-- C - 고난 -->
+      <div class="popup-section">
+        <span class="sacr-label sacr-c">C — 고난</span>
+        <p>팀 분위기를 흐리는 인원 등장. 해고 불가 상황에서 결과물 기준을 더 엄격히 적용해 자연스럽게 정리.</p>
+      </div>
+
+      <!-- R - 결과 -->
+      <div class="popup-section">
+        <span class="sacr-label sacr-r">R — 결과</span>
+        <div class="result-grid">
+          <div class="result-item">
+            <div class="num">22명</div>
+            <div class="label">1년 만에 확장</div>
+          </div>
+          <div class="result-item">
+            <div class="num">퇴사율 20%</div>
+            <div class="label">업계 평균 40% 절반</div>
+          </div>
+          <div class="result-item">
+            <div class="num">3개월</div>
+            <div class="label">온보딩 실무 투입</div>
+          </div>
+          <div class="result-item">
+            <div class="num">채용 브랜딩</div>
+            <div class="label">유튜브·인스타 운영</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 인사이트 -->
+      <div class="insight-box">채용을 마케팅처럼 설계했습니다. 좋은 사람이 오면 좋은 문화가 생기고, 좋은 문화가 퇴사율을 낮춥니다.</div>
+    </div>
+  </div>
+
+  <!-- 카페게이트 팝업 -->
+  <div class="overlay" id="overlay-cafe" onclick="closeOverlayOutside(event, 'cafe')">
+    <div class="overlay-content">
+      <button class="overlay-close" onclick="closeOverlay('cafe')">&times;</button>
+
+      <span class="card-tag tag-red-orange" style="margin-bottom:16px;">광고 전략 재설계</span>
+      <h2 style="font-size:24px; font-weight:800; margin-bottom:24px;">카페게이트 — 프랜차이즈 CPA 개선</h2>
+
+      <!-- 상단 지표 -->
+      <div class="popup-metrics">
+        <div class="popup-metric">
+          <div class="num">15만→8만</div>
+          <div class="label">문의 1건당 CPA</div>
+        </div>
+        <div class="popup-metric">
+          <div class="num">900만원</div>
+          <div class="label">월 광고 예산</div>
+        </div>
+        <div class="popup-metric">
+          <div class="num">데이터</div>
+          <div class="label">기반 예산 재배분</div>
+        </div>
+        <div class="popup-metric">
+          <div class="num">문의 질</div>
+          <div class="label">진성 전환율 급증</div>
+        </div>
+      </div>
+
+      <!-- S - 상황 -->
+      <div class="popup-section">
+        <span class="sacr-label sacr-s">S — 상황</span>
+        <p>월 900만 원(인스타 800만+네이버 100만)으로 80건 이상 문의. 계약 전환율이 낮았고, 네이버를 200만으로 증액해도 문의 질이 더 떨어졌습니다.</p>
+      </div>
+
+      <!-- A - 행동 -->
+      <div class="popup-section">
+        <span class="sacr-label sacr-a">A — 행동</span>
+
+        <!-- 데이터 테이블 -->
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>키워드 유형</th>
+              <th>광고비</th>
+              <th>문의 수</th>
+              <th>문의당 비용</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>브랜드명 키워드</td>
+              <td>10만원</td>
+              <td>19건</td>
+              <td>약 5,000원</td>
+            </tr>
+            <tr>
+              <td>일반 키워드</td>
+              <td>210만원</td>
+              <td>8건</td>
+              <td>약 26만원</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-bottom:16px;">성과 대부분이 이미 브랜드를 알던 사람에게서 나온 구조였습니다.</p>
+
+        <ul>
+          <li>네이버 220만 → 50만으로 축소. 검증된 브랜드명 키워드만 유지.</li>
+          <li>절감 예산을 인스타로 이동, 방향 완전 전환.</li>
+          <li>새 소재 — "왜 이 구조가 돈이 되는지" 설명. 객단가 구조, 점주 운영 부담 최소화 시스템.</li>
+        </ul>
+      </div>
+
+      <!-- 이미지 2개 -->
+      <div class="popup-images-row">
+        <div class="popup-image">
+          <img src="images/cafe-ad-before.jpg" alt="기존 광고 소재 (변경 전)"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="img-placeholder placeholder-cafe" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%;">
+            <span class="icon">&#x1F4CB;</span>
+            기존 광고 소재 (변경 전)
+          </div>
+        </div>
+        <div class="popup-image">
+          <img src="images/cafe-ad-after.jpg" alt="변경 후 광고 소재"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="img-placeholder placeholder-cafe" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%;">
+            <span class="icon">&#x2705;</span>
+            변경 후 광고 소재
+          </div>
+        </div>
+      </div>
+
+      <!-- R - 결과 -->
+      <div class="popup-section">
+        <span class="sacr-label sacr-r">R — 결과</span>
+
+        <!-- 비교 박스 -->
+        <div class="compare-box">
+          <div class="compare-before">
+            <div class="compare-label">변경 전</div>
+            <p>CPA 15만원<br>계약 전환율 낮음</p>
+          </div>
+          <div class="compare-after">
+            <div class="compare-label">변경 후</div>
+            <p>CPA 8만원대<br>진성 문의 급증</p>
+          </div>
+        </div>
+
+        <!-- 결과 그리드 -->
+        <div class="result-grid">
+          <div class="result-item">
+            <div class="num">15만 → 8만원</div>
+            <div class="label">문의 1건당 CPA</div>
+          </div>
+          <div class="result-item">
+            <div class="num">문의 질 개선</div>
+            <div class="label">진성 창업 문의 급증</div>
+          </div>
+          <div class="result-item">
+            <div class="num">네이버 170만 절감</div>
+            <div class="label">낭비 예산 재배분</div>
+          </div>
+          <div class="result-item">
+            <div class="num">인지→검색 구조</div>
+            <div class="label">배너 신뢰, 검색 마감</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 인사이트 -->
+      <div class="insight-box">구매 여정이 긴 업종은 배너·콘텐츠로 신뢰를 먼저 쌓고 검색으로 마감하는 구조가 맞습니다. 문의 수가 아닌 문의 질을 바꾼 사례입니다.</div>
+    </div>
+  </div>
+
+  <!-- ===== JavaScript ===== -->
+  <script>
+    /* 오버레이 열기 */
+    function openOverlay(id) {
+      var overlay = document.getElementById('overlay-' + id);
+      if (overlay) {
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    /* 오버레이 닫기 */
+    function closeOverlay(id) {
+      var overlay = document.getElementById('overlay-' + id);
+      if (overlay) {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    /* 외부 클릭으로 닫기 */
+    function closeOverlayOutside(event, id) {
+      if (event.target === event.currentTarget) {
+        closeOverlay(id);
+      }
+    }
+
+    /* ESC 키로 닫기 */
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        var overlays = document.querySelectorAll('.overlay.active');
+        overlays.forEach(function(overlay) {
+          overlay.classList.remove('active');
+        });
+        document.body.style.overflow = '';
+      }
+    });
+
+    /* 이미지 onerror 일괄 처리 — 페이지 로드 시 placeholder 자동 표시 */
+    document.addEventListener('DOMContentLoaded', function() {
+      var images = document.querySelectorAll('img[onerror]');
+      images.forEach(function(img) {
+        if (!img.complete || img.naturalWidth === 0) {
+          img.onerror();
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
