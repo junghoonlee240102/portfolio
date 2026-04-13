@@ -1600,10 +1600,10 @@
     });
 
     /* 이미지 onerror 일괄 처리 — 페이지 로드 시 placeholder 자동 표시 */
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('load', function() {
       var images = document.querySelectorAll('img[onerror]');
       images.forEach(function(img) {
-        if (!img.complete || img.naturalWidth === 0) {
+        if (img.naturalWidth === 0) {
           img.onerror();
         }
       });
